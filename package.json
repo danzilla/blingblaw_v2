@@ -1,0 +1,23 @@
+{
+  "name": "blingblaw",
+  "version": "2.0.0",
+  "author": "danzilla",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danzilla/BudgetApp.git"
+  },
+  "scripts": {
+    "server-install": "cd ./server && npm install",
+    "client-install": "cd ./client && npm install",
+    "install": "npm run server-install & npm run client-install",
+    "server": "cd ./server && npm start",
+    "client": "cd ./client && npm start",
+    "db": "docker-compose up -d pgadmin && docker-compose up postgres_db",
+    "docker-start": "docker-compose up -d pgadmin && docker-compose up postgres_db server client",
+    "docker-clean": "docker-compose rm -f && docker-compose build --no-cache"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "react-router-dom": "^6.3.0"
+  }
+}
