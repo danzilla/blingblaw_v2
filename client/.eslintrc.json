@@ -12,7 +12,8 @@
   "parserOptions": {
     "ecmaVersion": 2018
   },
-  "rules": {  
+  "rules": {
+    "linebreak-style": 0,
     "react/jsx-props-no-spreading": ["off", {
     "html": "ignore",
     "custom": "ignore",
